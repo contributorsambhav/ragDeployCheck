@@ -4,7 +4,12 @@ import ragbotRoutes from "./routes/v1/ragbot.route.js";
 import { connectDB } from "./db/dbConnection.js";
 import cors from "cors";
 import path from "path"
+import { fileURLToPath } from 'url';
+
 const PORT = process.env.PORT || 3001;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 const app = express();
 dotenv.config();
