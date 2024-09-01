@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+const PORT =3000;
 const app = express();
 dotenv.config();
 await connectDB();
