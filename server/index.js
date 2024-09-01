@@ -3,12 +3,11 @@ import dotenv from "dotenv";
 import ragbotRoutes from "./routes/v1/ragbot.route.js";
 import { connectDB } from "./db/dbConnection.js";
 import cors from "cors";
-import path from "path"
-import { fileURLToPath } from 'url';
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 const app = express();
 dotenv.config();
@@ -27,3 +26,7 @@ app.get("/health", (req, res) => {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/dist/index.html"));
 });
+
+app.listen(PORT, () =>
+  console.log(`Server is running on port https://ragdeploycheck.onrender.com`)
+);
