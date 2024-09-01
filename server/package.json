@@ -8,7 +8,7 @@
     "start": "node index.js",
     "dev": "node --watch index.js",
     "format": "npx prettier . --write",
-    "build": "npm install --prefix ./client && npm run build --prefix ./client && npm install"
+    "build": "npm install --prefix ./client && npm run build --prefix ./client && npm install && npx prisma generate"
   },
   "keywords": [],
   "author": "",
